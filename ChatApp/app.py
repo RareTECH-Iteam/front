@@ -13,6 +13,6 @@ def login():
 def test():
     return render_template('sample.html')
 
-# アプリケーションを実行。ホストを'0.0.0.0'に設定し、ポート5000でリッスン。デバッグモードを有効にする
+# アプリケーションを実行。ホストを'0.0.0.0'に設定し、ポート5001でリッスン。デバッグモードを有効にする
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5001, debug=True)
