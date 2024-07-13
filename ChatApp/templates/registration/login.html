@@ -1,0 +1,18 @@
+{% extends 'registration/base.html' %} 
+{% block title %}
+    <title>Login</title>
+{% endblock %} 
+{% block body %}
+    <main class="main-content">
+        <h1>ログイン</h1>
+        <form class="nes-field"> 
+            <label for="name_field">メールアドレス</label>
+            <input type="email" name="mail" id="name_field" class="nes-input"><br>
+            <label for="name_field">パスワード</label>
+            <input type="password" name="password" id="name_field" class="nes-input"><br>
+            <div class="button">
+                <button type="submit" class="nes-btn is-success">ログイン</button>
+            </div>
+        </form>
+    </main>
+{% endblock %}
