@@ -1,18 +1,27 @@
-{% extends 'registration/base.html' %} 
+{% extends 'registration/registration-base.html' %} 
 {% block title %}
     <title>Login</title>
 {% endblock %} 
 {% block body %}
     <main class="main-content">
-        <h1>ログイン</h1>
-        <form class="nes-field"> 
-            <label for="name_field">メールアドレス</label>
-            <input type="email" name="mail" id="name_field" class="nes-input"><br>
-            <label for="name_field">パスワード</label>
-            <input type="password" name="password" id="name_field" class="nes-input"><br>
-            <div class="button">
-                <button type="submit" class="nes-btn is-success">ログイン</button>
-            </div>
-        </form>
+        <div class="main-content-Element">
+            <h1>ログイン</h1>
+        </div>
+        <div class="main-content-Element">
+            <form class="nes-field form-wrapper"> 
+                <div class="form-Element">
+                    <label for="name_field">メールアドレス</label>
+                    <input type="email" name="mail" id="name_field" class="nes-input">
+                </div>
+                <div class="form-Element">
+                    <label for="password_field">パスワード</label>
+                    <input type="password" name="password" id="password_field" class="nes-input">
+                </div>
+                <div class="form-Element button">
+                    <a class="nes-btn" href="signup.html">新規会員登録</a>
+                    <button type="submit" class="nes-btn is-success">ログイン</button>
+                </div>
+            </form>
+        </div>
     </main>
 {% endblock %}
