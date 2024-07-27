@@ -4,10 +4,10 @@ from flask import Flask, render_template
 # Flaskアプリケーションのインスタンスを作成
 app = Flask(__name__)
 
-# cssのページの表示
-@app.route('/')
+# テストページの表示
+@app.route('/test')
 def test():
-    return render_template('sample.html')
+    return render_template('test.html')
 
 # ログインページの表示
 @app.route('/login')

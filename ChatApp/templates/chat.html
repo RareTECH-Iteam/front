@@ -4,8 +4,42 @@
 {% endblock %} 
 {% block maincontent %}
     <div class="col-sm-9 content mt-5 offset-sm-3">
-        <p>チャット画面</p>
-        <img src="https://picsum.photos/800/600" class="img-fluid" alt="メインビジュアル">
-        <img src="https://picsum.photos/800/600" class="img-fluid" alt="メインビジュアル">
+        <div class="row">
+            <div class="col-3"><a class="nes-btn" href="#">ルームから退出</a></div>
+            <div class="col-9"><p class="mb-0">TANAKAさんとのチャットルーム</p></div>
+            <hr>
+        </div>
+        <div class="row">
+            <section class="message-list">
+                <section class="message -left d-flex justify-content-start">
+                    <img src="https://github.com/mdo.png" alt="mdo" width="80" height="80" class="rounded-circle">
+                    <div class="nes-balloon from-left">
+                      <p>はじめまして、TANAKAです。よろしくお願いします。</p>
+                    </div>
+                </section>
+                <section class="message -right d-flex justify-content-end">
+                    <div class="nes-balloon from-right">
+                      <p>メッセージありがとうございます。YAMADAです。</p>
+                    </div>
+                </section>
+                <section class="message -right d-flex justify-content-end">
+                    <div class="nes-balloon from-right">
+                      <p>東京のどのようなことについて知りたいですか？</p>
+                    </div>
+                </section>
+                <section class="message -left d-flex justify-content-start">
+                    <img src="https://github.com/mdo.png" alt="mdo" width="80" height="80" class="rounded-circle">
+                    <div class="nes-balloon from-left">
+                      <p>日本橋周辺でゆっくりできるカフェを知りたいです。</p>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <div class="row">
+            <div class="nes-field is-inline">
+                <input type="text" id="name_field" class="nes-input" placeholder="テキスト">
+                <button type="button" class="nes-btn is-primary">SEND</button>
+            </div>
+        </div>
     </div>
 {% endblock %}

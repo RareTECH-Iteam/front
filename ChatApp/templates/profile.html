@@ -4,8 +4,36 @@
 {% endblock %} 
 {% block maincontent %}
     <div class="col-sm-9 content mt-5 offset-sm-3">
-        <p>プロフィール画面</p>
-        <img src="https://picsum.photos/800/600" class="img-fluid" alt="メインビジュアル">
-        <img src="https://picsum.photos/800/600" class="img-fluid" alt="メインビジュアル">
+        <div class="row">
+            <h1>プロフィール画面</h1>
+        </div>
+        <div class="row">
+            <hr>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-3">
+                <img src="https://github.com/mdo.png" alt="mdo" width="160" height="160" class="rounded-circle">
+            </div>
+            <div class="col-7">
+                <div class="row">
+                    <div class="col-3"><p class="text-start">ユーザ名</p></div>
+                    <div class="col-7"><p class="text-start">YAMADA</p></div>
+                </div>
+                <div class="row">
+                    <div class="col-3"><p class="text-start">メールアドレス</p></div>
+                    <div class="col-7"><p class="text-start">yamada@gmail.com</p></div>
+                </div>
+                <div class="row">
+                    <div class="col-3"><p class="text-start">居住地</p></div>
+                    <div class="col-7"><p class="text-start">東京都</p></div>
+                </div>
+                <div class="row">
+                    <div class="col-3"><p class="text-start">あいさつ文</p></div>
+                    <div class="col-7"><p class="text-start">東京のカフェ巡りが好きで、おすすめのお店がたくさんあります！</p></div>    
+                </div>
+            </div>
+        </div>
+        <a class="nes-btn" href="{{ url_for('home') }}">ホーム画面</a>
+        <button type="button" class="nes-btn is-primary">変更</button>
     </div>
 {% endblock %} 
