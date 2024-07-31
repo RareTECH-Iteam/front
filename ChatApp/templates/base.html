@@ -16,8 +16,10 @@
 <body>
     <div class="container-fluid">
         <!-- ヘッダー -->
-        <div class="row header fixed-top m-0">
-            <div class="col-6 site-title">HELLOFROM</div>
+        <div class="row header fixed-top m-0 z-3">
+            <div class="col-6 site-title">
+                <img src="{{ url_for('static',filename='img/HELLOFROM.png') }}" alt="logo"  class="header-logo"/>
+            </div>
             <div class="col-6 dropdown text-end">
                 <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">

@@ -1,7 +1,9 @@
 /* 色を使い回しできるように変数にする */
 :root {
-    --mainContent: #F6F5EE;
-    --navColor: #DFD6B8;
-    --accentColor1: #A32135;
-    --accentColor2: #D9BE72;
+    --mainContent: #FFFFFF;
+    --navColor: #E1E1E1;
+    --accentColor1: #0059A9;
+    --accentColor2: #00A046;
+    --accentColor3: #E7C000;
+    --accentColor4: #C60519;
   }
