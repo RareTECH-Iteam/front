@@ -8,16 +8,23 @@
             <img src="{{ url_for('static',filename='img/LOGIN.png') }}" alt="login"  class="mainContent-logo"/>
         </div>
         <div class="main-content-Element">
-            <form class="nes-field form-wrapper"> 
+            <form method="post" class="nes-field form-wrapper"> 
                 <div class="form-Element">
-                    <label for="name_field">メールアドレス</label>
-                    <input type="email" name="mail" id="name_field" class="nes-input">
+                    <label for="email">メールアドレス</label>
+                    <input type="email" name="email" id="email" class="nes-input">
                 </div>
                 <div class="form-Element">
-                    <label for="password_field">パスワード</label>
-                    <input type="password" name="password" id="password_field" class="nes-input">
+                    <label for="password">パスワード</label>
+                    <input type="password" name="password" id="password" class="nes-input">
                 </div>
                 <div class="form-Element button">
+                    {% with messages = get_flashed_messages() %} {% if messages %}
+                    <ul class="flashes">
+                        {% for message in messages %}
+                        <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %} {% endwith %}
                     <a class="nes-btn" href="{{ url_for('signup') }}">新規会員登録</a>
                     <button type="submit" class="nes-btn is-success">ログイン</button>
                 </div>

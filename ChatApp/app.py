@@ -34,6 +34,16 @@ def chat_list():
 def chat():
     return render_template('chat.html')
 
+# チャット一覧画面ページの表示
+@app.route('/matching')
+def matching():
+    return render_template('matching.html')
+
+# チャット画面ページの表示
+@app.route('/request_list')
+def request_list():
+    return render_template('request_list.html')
+
 # プロフィール画面ページの表示
 @app.route('/profile')
 def profile():
