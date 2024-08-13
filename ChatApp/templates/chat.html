@@ -7,69 +7,36 @@
         <div class="row fixed-top mx-0 justify-content-end chatHead z-2">
             <div class="col-12 col-sm-9 bg-white border-bottom">
                 <div class="row">
-                    <div class="col-2 d-inline-flex mt-3 mb-2"><a class="nes-btn" href="#">退出</a></div>
-                    <div class="col-10 d-flex align-items-center justify-content-center mt-3 mb-2"><p class="mb-0">TANAKAさんとのチャットルーム</p></div>
+                    <div class="col-2 d-inline-flex mt-3 mb-2"><a class="nes-btn" href="{{ url_for('chat_list') }}">退出</a></div>
+                    <div class="col-10 d-flex align-items-center justify-content-center mt-3 mb-2"><p class="mb-0">チャットルーム {{ chat_id }</p></div>
                 </div>
             </div>
         </div>
         <div class="row">
             <section class="message-list chatContent">
-                <section class="message -left d-flex justify-content-start">
+                <!-- {% for message in messages %}
+                <li>
+                    <span class="message-user">{{ message['uid'] }}</span>
+                    <p class="message-content">{{ message['message'] }}</p>
+                    <span class="message-time">{{ message['created_at'].strftime('%Y-%m-%d %H:%M:%S') }}</span>
+                </li>
+                {% endfor %} -->
+                {% for message in messages %}
+                <section class="message -left d-flex justify-content-start"></section>
                     <img src="https://github.com/mdo.png" alt="mdo" width="80" height="80" class="rounded-circle">
+                    <span class="message-user">{{ message['uid'] }}</span>
                     <div class="nes-balloon from-left">
-                      <p>はじめまして、TANAKAです。よろしくお願いします。</p>
+                        <p class="message-content">{{ message['message'] }}</p>
                     </div>
+                    <span class="message-time">{{ message['created_at'].strftime('%Y-%m-%d %H:%M:%S') }}</span>
                 </section>
-                <section class="message -left d-flex justify-content-start">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="80" height="80" class="rounded-circle">
-                    <div class="nes-balloon from-left">
-                      <p>9月頃に東京に行く予定があり、メッセージさせて頂きました。</p>
-                    </div>
-                </section>
-                <section class="message -right d-flex justify-content-end">
-                    <div class="nes-balloon from-right">
-                      <p>メッセージありがとうございます。YAMADAです。</p>
-                    </div>
-                </section>
-                <section class="message -right d-flex justify-content-end">
-                    <div class="nes-balloon from-right">
-                      <p>私は東京のカフェ巡りが好きで、行くエリアが決まっていれば、近くのカフェを紹介することができます！</p>
-                    </div>
-                </section>
-                <section class="message -right d-flex justify-content-end">
-                    <div class="nes-balloon from-right">
-                      <p>勿論、カフェ以外にも遊べるスポットなどある程度知っておりますので、<br>ご希望に合わせてレコメンドします！</p>
-                    </div>
-                </section>
-                <section class="message -right d-flex justify-content-end">
-                    <div class="nes-balloon from-right">
-                      <p>東京のどのようなことについて知りたいですか？</p>
-                    </div>
-                </section>
-                <section class="message -left d-flex justify-content-start">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="80" height="80" class="rounded-circle">
-                    <div class="nes-balloon from-left">
-                      <p>日本橋周辺でゆっくりできるカフェを知りたいです。</p>
-                    </div>
-                </section>
-                <section class="message -left d-flex justify-content-start">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="80" height="80" class="rounded-circle">
-                    <div class="nes-balloon from-left">
-                      <p>日本橋周辺でゆっくりできるカフェを知りたいです。</p>
-                    </div>
-                </section>
-                <section class="message -left d-flex justify-content-start">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="80" height="80" class="rounded-circle">
-                    <div class="nes-balloon from-left">
-                      <p>日本橋周辺でゆっくりできるカフェを知りたいです。</p>
-                    </div>
-                </section>
+                {% endfor %}
             </section>
         </div>
         <form action="#" method="post">
             <div class="row fixed-bottom mx-0 justify-content-end chatbox z-2">
                 <div class="nes-field col-12 col-sm-9 bg-white is-inline">
-                    <input type="text" id="chat_text" name="chat_text" class="nes-input my-2" placeholder="テキスト">
+                    <input type="text" id="chat_text" name="message" class="nes-input my-2" placeholder="Type your message here">
                     <button type="submit" class="nes-btn is-primary">SEND</button>
                 </div>
             </div>

@@ -14,7 +14,7 @@
                         <form action="#" method="post">
                             <div class="nes-field">
                                 <div class="nes-select">
-                                    <select required id="default_select">
+                                    <select required id="address-select">
                                         <option value="" disabled selected hidden>-----</option>
                                         <option value="北海道">北海道</option>
                                         <option value="青森県">青森県</option>
@@ -66,21 +66,18 @@
                                     </select>
                                 </div>
                             </div>
-                            <button type="submit" class="nes-btn is-primary">検索</button>
+                            <button type="submit" class="nes-btn is-primary" onclick="search()">検索</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- <div class="row justify-content-center">
-            <div class="col-11">
-                <hr>
-            </div>
-        </div> -->
         <div class="matchingContent">
             <div class="row justify-content-center d-flex align-items-center mb-3">
-                <div class="col-2">
+                <div id="results" class="icon-list">
+                    <!-- 検索結果がここに表示されます -->
+                </div>
+                <!-- <div class="col-2">
                     <img src="https://github.com/mdo.png" alt="mdo" width="80" height="80" class="rounded-circle">
                 </div>
                 <div class="col-2">
@@ -91,120 +88,144 @@
                 </div>
                 <div class="col-4">
                     <p class="text-start mb-0">長崎市に住んでいます。美味しいちゃんぽん知ってます。</p>
-                </div>
+                </div> -->
             </div>
-            <div class="row justify-content-center d-flex align-items-center mb-3">
-                <div class="col-2">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="80" height="80" class="rounded-circle">
-                </div>
-                <div class="col-2">
-                    <p class="text-start mb-0">BBBB</p>
-                </div>
-                <div class="col-2">
-                    <p class="text-start mb-0">福岡県</p>
-                </div>
-                <div class="col-4">
-                    <p class="text-start mb-0">ただの酒飲み</p>
-                </div>
-            </div>
-            <div class="row justify-content-center d-flex align-items-center mb-3">
-                <div class="col-2">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="80" height="80" class="rounded-circle">
-                </div>
-                <div class="col-2">
-                    <p class="text-start mb-0">CCCC</p>
-                </div>
-                <div class="col-2">
-                    <p class="text-start mb-0">佐賀県</p>
-                </div>
-                <div class="col-4">
-                    <p class="text-start mb-0">ツーリングロードのおすすめあります</p>
-                </div>
-            </div>
-            <div class="row justify-content-center d-flex align-items-center mb-3">
-                <div class="col-2">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="80" height="80" class="rounded-circle">
-                </div>
-                <div class="col-2">
-                    <p class="text-start mb-0">DDDD</p>
-                </div>
-                <div class="col-2">
-                    <p class="text-start mb-0">熊本県</p>
-                </div>
-                <div class="col-4">
-                    <p class="text-start mb-0">ペンション経営しています。</p>
-                </div>
-            </div>
-            <div class="row justify-content-center d-flex align-items-center mb-3">
-                <div class="col-2">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="80" height="80" class="rounded-circle">
-                </div>
-                <div class="col-2">
-                    <p class="text-start mb-0">EEEE</p>
-                </div>
-                <div class="col-2">
-                    <p class="text-start mb-0">宮崎県</p>
-                </div>
-                <div class="col-4">
-                    <p class="text-start mb-0">鶏がおいしい居酒屋をおすすめしたい</p>
-                </div>
-            </div>
-            <div class="row justify-content-center d-flex align-items-center mb-3">
-                <div class="col-2">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="80" height="80" class="rounded-circle">
-                </div>
-                <div class="col-2">
-                    <p class="text-start mb-0">FFFF</p>
-                </div>
-                <div class="col-2">
-                    <p class="text-start mb-0">鹿児島県</p>
-                </div>
-                <div class="col-4">
-                    <p class="text-start mb-0">何でもご質問どうぞ</p>
-                </div>
-            </div>
-            <div class="row justify-content-center d-flex align-items-center mb-3">
-                <div class="col-2">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="80" height="80" class="rounded-circle">
-                </div>
-                <div class="col-2">
-                    <p class="text-start mb-0">GGGG</p>
-                </div>
-                <div class="col-2">
-                    <p class="text-start mb-0">長崎県</p>
-                </div>
-                <div class="col-4">
-                    <p class="text-start mb-0">子連れでも楽しめる旅おすすめできます</p>
-                </div>
-            </div>
-            <div class="row justify-content-center d-flex align-items-center mb-3">
-                <div class="col-2">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="80" height="80" class="rounded-circle">
-                </div>
-                <div class="col-2">
-                    <p class="text-start mb-0">HHHH</p>
-                </div>
-                <div class="col-2">
-                    <p class="text-start mb-0">長崎県</p>
-                </div>
-                <div class="col-4">
-                    <p class="text-start mb-0">猫が集まるスポット知っています</p>
-                </div>
-            </div>
-            <div class="row justify-content-center d-flex align-items-center mb-3">
-                <div class="col-2">
-                    <img src="https://github.com/mdo.png" alt="mdo" width="80" height="80" class="rounded-circle">
-                </div>
-                <div class="col-2">
-                    <p class="text-start mb-0">IIII</p>
-                </div>
-                <div class="col-2">
-                    <p class="text-start mb-0">福岡県</p>
-                </div>
-                <div class="col-4">
-                    <p class="text-start mb-0">酒しか飲まん</p>
-                </div>
+        </div>
+        <!-- ポップアップ -->
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <p id="popup-text"></p>
+                <button class="cancel-btn" onclick="cancel()">キャンセル</button>
+                <button class="create-btn" onclick="create()">作成</button>
             </div>
         </div>
     </div>
-{% endblock %} 
+{% endblock %}
+{% block jscript %}
+<script>
+    let selectedUser = {};  // 選択されたユーザー情報を保持するための変数
+    let loggedInUserName = ""; // サーバーからログインユーザー名を取得
+    console.log('Logged in User Name:', loggedInUserName); // デバッグ用ログ
+
+    async function fetchLoggedInUserName() {
+        try {
+            const response = await fetch('/get_logged_in_user'); // サーバーからログインユーザー名を取得
+            if (response.ok) {
+                const data = await response.json();
+                loggedInUserName = data.username; // サーバーからのレスポンスに一致するように修正
+                console.log('Logged in User Name:', loggedInUserName); // デバッグ用ログ
+            } else {
+                console.error('Failed to fetch logged-in username');
+            }
+        } catch (error) {
+            console.error('Error fetching logged-in username:', error);
+        }
+    }
+
+    fetchLoggedInUserName().then(() => {
+        console.log('Logged in User Name after fetch:', loggedInUserName); // 非同期処理が完了した後に確認
+    });
+
+
+    async function search() {
+        const address = document.getElementById('address-select').value; // 住所の入力フィールドの値を取得
+        if (address) { // 住所が入力されているかチェック
+            try {
+                const response = await fetch('/matching', { // サーバーにPOSTリクエストを送信してマッチングを行う
+                    method: 'POST', // リクエストのメソッドをPOSTに設定
+                    headers: {
+                        'Content-Type': 'application/json', // リクエストのデータ形式をJSONに指定
+                    },
+                    body: JSON.stringify({ address: address }), // 住所をJSON形式でリクエストボディに含める
+                });
+
+                if (response.ok) { // レスポンスが正常かチェック
+                    const users = await response.json(); // レスポンスをJSONとして解析
+                    displayResults(users); // 検索結果を表示する関数を呼び出す
+                } else {
+                    alert('検索に失敗しました'); // レスポンスが正常でない場合にアラートを表示
+                }
+            } catch (error) {
+                console.error('Error:', error); // エラー内容をコンソールに表示
+                alert('エラーが発生しました'); // エラー発生時にアラートを表示
+            }
+        } else {
+            alert('住所を選択してください'); // 住所が選択されていない場合にアラートを表示
+        }
+    }
+
+    function displayResults(users) {
+        const resultsDiv = document.getElementById('results'); // 結果を表示する要素を取得
+        resultsDiv.innerHTML = '';  // 既存の結果をクリア
+        if (users.length > 0) { // ユーザーが存在するかチェック
+            users.forEach(user => { // 各ユーザーに対して処理を実行
+                const userDiv = document.createElement('div'); // 新しいdiv要素を作成
+                userDiv.classList.add('icon-item'); // div要素にクラスを追加
+                userDiv.innerHTML = `
+                    <div class="icon-circle"></div>
+                    <span>${user.name}</span>
+                    <span>${user.address}</span>
+                    <span>${user.greeting}</span>
+                    <span>UID: ${user.uid}</span>
+                `; // ユーザー情報を含むHTMLを作成してdivに挿入
+                userDiv.onclick = () => { // divがクリックされたときに実行される処理を定義
+                    selectedUser = { // クリックされたユーザー情報を保持する
+                        uid: user.uid,
+                        name: user.name,
+                        address: user.address,
+                        greeting: user.greeting
+                    };
+                    showPopup(selectedUser); // ポップアップを表示する関数を呼び出す
+                };
+                resultsDiv.appendChild(userDiv); // 結果表示エリアにユーザー情報を追加
+            });
+        } else {
+            resultsDiv.innerHTML = '<p>該当するユーザーが見つかりませんでした。</p>'; // ユーザーが見つからない場合にメッセージを表示
+        }
+    }
+
+    function showPopup(user) {
+        document.getElementById('popup-text').innerText = `${user.name} (${user.address}) とのルームを作成しますか？ UID: ${user.uid}`;
+        document.getElementById('popup').style.display = 'flex'; // ポップアップを表示する
+    }
+
+    function cancel() {
+        document.getElementById('popup').style.display = 'none'; // ポップアップを非表示にする
+    }
+
+    async function create() {
+        try {
+            if (!loggedInUserName) {
+                alert('ログインユーザー名が取得できませんでした。');
+                return; // `loggedInUserName` が `undefined` の場合は処理を中断
+            }
+
+            const uid = selectedUser.uid;
+
+            const response = await fetch('/create_chatroom', { // サーバーにPOSTリクエストを送信してチャットルームを作成する
+                method: 'POST', // リクエストのメソッドをPOSTに設定
+                headers: {
+                    'Content-Type': 'application/json', // リクエストのデータ形式をJSONに指定
+                },
+                body: JSON.stringify({ // チャットルームの作成に必要なデータをリクエストボディに含める
+                    name: `${loggedInUserName} & ${selectedUser.name}`, // 修正: `loggedInUserName.name` ではなく `loggedInUserName` に変更
+                    address: selectedUser.address,
+                    uid: uid
+                }),
+            });
+
+            if (response.ok) { // レスポンスが正常かチェック
+                const result = await response.json();
+                console.log('Logged in Username:', result.logged_in_username);  // ログインユーザー名をログ出力
+                console.log('Selected Username:', result.selected_username);  // 選択されたユーザー名をログ出力
+                window.location.href = "{{ url_for('chat_list') }}"; // チャットリストページへリダイレクト
+            } else {
+                alert('チャットルームの作成に失敗しました'); // レスポンスが正常でない場合にアラートを表示
+            }
+        } catch (error) {
+            console.error('Error:', error); // エラー内容をコンソールに表示
+            alert('エラーが発生しました'); // エラー発生時にアラートを表示
+        }
+    }
+</script>
+{% endblock %}

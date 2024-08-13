@@ -19,19 +19,19 @@
             <div class="col-7">
                 <div class="row">
                     <div class="col-3"><p class="text-start">ユーザ名</p></div>
-                    <div class="col-7"><p class="text-start">YAMADA</p></div>
+                    <div class="col-7"><p class="text-start"> {{ user.username }} </p></div>
                 </div>
                 <div class="row">
                     <div class="col-3"><p class="text-start">メールアドレス</p></div>
-                    <div class="col-7"><p class="text-start">yamada@gmail.com</p></div>
+                    <div class="col-7"><p class="text-start"> {{ user.email }} </p></div>
                 </div>
                 <div class="row">
                     <div class="col-3"><p class="text-start">居住地</p></div>
-                    <div class="col-7"><p class="text-start">東京都</p></div>
+                    <div class="col-7"><p class="text-start"> {{ user.address }} </p></div>
                 </div>
                 <div class="row">
                     <div class="col-3"><p class="text-start">あいさつ文</p></div>
-                    <div class="col-7"><p class="text-start">東京のカフェ巡りが好きで、おすすめのお店がたくさんあります！</p></div>    
+                    <div class="col-7"><p class="text-start"> {{ user.greeting }} </p></div>    
                 </div>
             </div>
         </div>

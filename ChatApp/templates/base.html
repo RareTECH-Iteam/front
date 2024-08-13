@@ -33,8 +33,8 @@
         <div class="row flex-grow-1 main-content">
             <!-- サイドバー -->
             <div class="col-sm-3 sidebar d-none d-sm-block fixed-left">
-                <p>チャット一覧</p>
-                <p>＋マッチング</p>
+                <p><a href="{{ url_for('chat_list') }}">チャットルーム一覧</a></p>
+                <p><a href="{{ url_for('matching') }}">＋マッチング</a></p>
                 <!-- <p>マッチング依頼</p> -->
             </div>
             {% block maincontent %}
@@ -43,8 +43,8 @@
         </div>
         <!-- フッター -->
         <div class="row footer-nav d-sm-none justify-content-center fixed-bottom m-0">
-            <div class="col">チャット一覧</div>
-            <div class="col">＋マッチング</div>
+            <div class="col"><a href="{{ url_for('chat_list') }}">チャットルーム一覧</a></div>
+            <div class="col"><a href="{{ url_for('matching') }}">＋マッチング</a></div>
             <!-- <div class="col">マッチング依頼</div> -->
         </div>
     </div>
